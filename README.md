@@ -37,7 +37,7 @@ all the project's dependencies:
 npm install
 ```
 
-Now, start the application in your browser run:
+Now, to start the application in your browser run:
 
 ``` bash
 # Launch application in the browser
@@ -55,6 +55,8 @@ Click in the second tab with the label "Add Note". It will take you to a page wh
 
 ### Review, Edit and Delete
 
-Click in the first tab located in the bottom bar with the label "My Notes" there you will find all the created
+Click in the first tab located in the bottom bar with the label "My Notes". There you will find all the created
 notes. In the top of the notes list you will find a Search bar, there you can put the text you want to search
-and it will filter the notes dynamically. At the right of every Note you will find 2 icons. One is for review and edit that note, and the other is to delete it. After editing your note just click the "Save" button and it will take you back to the "My notes" page.
+and it will filter the notes dynamically. At the right of every Note you will find 2 icons. One is for review
+and edit that note, and the other is to delete it. After editing your note just click the "Save" button and it
+will take you back to the "My notes" page.
