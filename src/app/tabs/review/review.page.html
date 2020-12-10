@@ -14,9 +14,13 @@
   </ion-header>
 
   <ion-content>
+    <ion-searchbar [(ngModel)]="filter"></ion-searchbar>
     <ion-list class="row" *ngIf="notes?.length > 0;else empty_message">
-      <ion-item class="col col-50" *ngFor="let note of notes" class="note-list">
-        {{note.title}}
+      <ion-item *ngFor="let note of notes | filter:filter">
+        <ion-label class="note-title">{{note.title}}</ion-label>
+        <ion-icon size="large" name="create-outline" [routerLink]="['/tabs/edition', note.id]"></ion-icon>
+        <div class="verticalLine"></div>
+        <ion-icon size="large" name="trash-outline" (click)="onDeleteClicked(note.id)"></ion-icon>
       </ion-item>
     </ion-list>
     <ng-template #empty_message>

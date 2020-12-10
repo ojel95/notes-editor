@@ -1,3 +1,10 @@
+/**
+ * Declaration of tabs page routing module.
+ *
+ * @author orlando.espinosa
+ * @date   2020-12-10
+ */
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
@@ -16,7 +23,7 @@ const routes: Routes = [
         loadChildren: () => import('./review/review.module').then(m => m.ReviewPageModule)
       },
       {
-        path: 'edition',
+        path: 'edition/:id',
         loadChildren: () => import('./edition/edition.module').then(m => m.EditionPageModule)
       },
       {
@@ -33,6 +40,9 @@ const routes: Routes = [
   }
 ];
 
+/**
+ * Implements the general tabs page routing module.
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
