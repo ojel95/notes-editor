@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      My Notes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">My Notes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list class="row" *ngIf="notes?.length > 0;else empty_message">
+      <ion-item class="col col-50" *ngFor="let note of notes" class="note-list">
+        {{note.title}}
+      </ion-item>
+    </ion-list>
+    <ng-template #empty_message>
+      <h3 class="empty-message">There are not notes. Please go to "Add Note" tab</h3>
+    </ng-template>
+  </ion-content>
+  
+</ion-content>
